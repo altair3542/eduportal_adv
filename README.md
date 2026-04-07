@@ -114,4 +114,3 @@ Este proyecto sirve como base de frontend para practicar:
 - validaciones por campo
 - estado de éxito y flujo de registro
 - preparación de diseño para una migración futura a Tailwind
-
