@@ -80,7 +80,19 @@ Opción C (abrir proyecto en Command Prompt o Git Bash):
 
 - Ejecuta los mismos comandos de npm desde CMD o Git Bash.
 
-Nota: evita usar cambios permanentes de política en toda la máquina si no son necesarios.
+Opción D (global, PowerShell como Administrador):
+
+```powershell
+Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy RemoteSigned
+```
+
+Verificación recomendada:
+
+```powershell
+Get-ExecutionPolicy -List
+```
+
+Nota: esta opción aplica a todo el equipo. En máquinas institucionales, úsala solo si está permitida por la política de TI.
 
 ### 2) Puerto ocupado
 
