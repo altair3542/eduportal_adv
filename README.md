@@ -1,39 +1,48 @@
-# EduPortal Frontend — base reformulada hasta la sesión 5
+# EduPortal Frontend
 
-Base del proyecto integrador rehecha para el curso hasta la sesión 5. Esta versión **todavía usa CSS tradicional**, pero ya adopta la identidad visual moderna que se migrará a **Tailwind CSS 4.1** en la siguiente etapa.
+Proyecto base con React + Vite para práctica de formularios, validación y diseño UI.
 
-## Objetivo didáctico
+## Inicio rápido
 
-Esta base existe para que los estudiantes puedan comparar dos enfoques:
+1. Instala Node.js LTS (recomendado 20.x).
+2. Verifica versión:
 
-1. **Construcción visual con CSS clásico**, usando variables, sombras, layouts, estados y componentes.
-2. **Migración posterior a Tailwind CSS 4.1**, donde buena parte de esta intención visual podrá expresarse de forma más rápida y consistente con utilidades.
+```bash
+node -v
+npm -v
+```
 
-## Qué incluye
+3. Instala dependencias:
 
-- React + Vite
-- Diseño moderno, suave y cercano a neumorfismo/soft UI
-- Módulo de registro de usuario
-- Formularios controlados
-- Validación por campo y validación final
-- Renderizado condicional del estado exitoso
-- Base visual pensada para futura traducción a Tailwind
-- Documentación adicional en `docs/`
+```bash
+npm install
+```
 
-## Estructura
+4. Inicia el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+5. Abre la URL que aparece en consola (normalmente http://localhost:5173).
+
+## Scripts disponibles
+
+```bash
+npm run dev      # desarrollo
+npm run build    # build de producción
+npm run preview  # vista previa del build
+```
+
+## Estructura del proyecto
 
 ```text
-eduportal-frontend-s5-css-base/
+eduportal_adv/
 ├─ docs/
 │  ├─ design-identity.md
 │  └─ tailwind-translation-guide.md
 ├─ src/
 │  ├─ components/
-│  │  ├─ FeatureCard.jsx
-│  │  ├─ FormField.jsx
-│  │  ├─ Header.jsx
-│  │  ├─ RegisterForm.jsx
-│  │  └─ SuccessMessage.jsx
 │  ├─ App.jsx
 │  ├─ index.css
 │  └─ main.jsx
@@ -43,43 +52,66 @@ eduportal-frontend-s5-css-base/
 └─ README.md
 ```
 
-## Requisitos
+## Solución de problemas
 
-- Node.js 18 o superior
-- npm 9 o superior
+### 1) Error por política de scripts (Windows PowerShell)
 
-## Instalación y ejecución
+Si ves un error parecido a:
+
+- running scripts is disabled on this system
+- cannot be loaded because running scripts is disabled
+
+Prueba, en este orden:
+
+Opción A (temporal, solo para la terminal actual):
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+npm run dev
+```
+
+Opción B (sin cambiar políticas, usando CMD):
+
+```cmd
+npm.cmd run dev
+```
+
+Opción C (abrir proyecto en Command Prompt o Git Bash):
+
+- Ejecuta los mismos comandos de npm desde CMD o Git Bash.
+
+Nota: evita usar cambios permanentes de política en toda la máquina si no son necesarios.
+
+### 2) Puerto ocupado
+
+Si Vite indica que el puerto está en uso, acepta el puerto alternativo sugerido por consola o cierra el proceso que lo ocupa.
+
+### 3) Dependencias corruptas
+
+Si hay errores extraños al iniciar:
 
 ```bash
+rm -rf node_modules package-lock.json
 npm install
 npm run dev
 ```
 
-## Scripts
+En Windows PowerShell:
 
-```bash
+```powershell
+Remove-Item -Recurse -Force node_modules
+Remove-Item -Force package-lock.json
+npm install
 npm run dev
-npm run build
-npm run preview
 ```
 
-## Qué debe observar el estudiante
+## Contexto académico
 
-- Cuántas decisiones visuales quedaron expresadas en CSS manual.
-- Cuántos estados de interfaz ya están definidos: normal, foco, error, éxito.
-- Cómo una sola pantalla ya requiere muchas reglas de layout, espaciado, color y profundidad.
-- Por qué una utilidad-first framework como Tailwind acelera tanto cuando la identidad visual ya está bien pensada.
+Este proyecto sirve como base de frontend para practicar:
 
-## Preparación para Tailwind CSS 4.1
-
-En Tailwind CSS con Vite, la instalación oficial actual usa `tailwindcss` y `@tailwindcss/vite`, y la carga del framework se hace importando `@import "tailwindcss";` en el CSS principal. Consulta la documentación oficial cuando se haga la migración real.
-
-## Próximo paso sugerido
-
-Migrar esta base a:
-
-- Tailwind CSS 4.1
-- tokens visuales equivalentes en utilidades
-- componentes con `className` utilitario
-- posible extracción de patrones repetidos a componentes de UI
+- componentes React
+- formularios controlados
+- validaciones por campo
+- estado de éxito y flujo de registro
+- preparación de diseño para una migración futura a Tailwind
 
