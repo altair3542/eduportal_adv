@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Universidad de Antioquia",
+    "country": "Colombia",
+    "domains": ["udea.edu.co"],
+    "web_pages": ["https://www.udea.edu.co"]
+  },
+  {
+    "name": "Universidad Nacional de Colombia",
+    "country": "Colombia",
+    "domains": ["unal.edu.co"],
+    "web_pages": ["https://unal.edu.co"]
+  },
+  {
+    "name": "Pontificia Universidad Javeriana",
+    "country": "Colombia",
+    "domains": ["javeriana.edu.co"],
+    "web_pages": ["https://www.javeriana.edu.co"]
+  },
+  {
+    "name": "Universidad de Buenos Aires",
+    "country": "Argentina",
+    "domains": ["uba.ar"],
+    "web_pages": ["https://www.uba.ar"]
+  },
+  {
+    "name": "Universidad de Chile",
+    "country": "Chile",
+    "domains": ["uchile.cl"],
+    "web_pages": ["https://www.uchile.cl"]
+  },
+  {
+    "name": "Universidad Nacional Autónoma de México",
+    "country": "México",
+    "domains": ["unam.mx"],
+    "web_pages": ["https://www.unam.mx"]
+  }
+]
