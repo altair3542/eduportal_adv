@@ -1,14 +1,7 @@
-import AppShell from './app/AppShell';
-// import OnboardingPage from './features/onboarding/OnboardingPage';
-import UniversityExplorerPage from './features/universities/UniversityExplorerPage'
+import AppRoutes from './app/AppRoutes';
 
 function App() {
-  return (
-    <AppShell>
-      {/* <OnboardingPage /> */}
-      <UniversityExplorerPage />
-    </AppShell>
-  );
+  return <AppRoutes />;
 }
 
 export default App;
