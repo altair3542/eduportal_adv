@@ -9,12 +9,17 @@ const INITIAL_SESSION = { isAuthenticated: false };
 
 export function AppProvider({ children }) {
   const [profile, setProfile] = useLocalStorage('eduportal:profile', INITIAL_PROFILE);
-  const [favorites, setFavorites] = useLocalStorage('eduportal:favorites', INITIAL_FAVORITES);
-  const [session, setSession] = useLocalStorage('eduportal:session', INITIAL_SESSION);
+  const [favorites, setFavorites] = useLocalStorage('eduportal:favorites', []);
+  const [session, setSession] = useLocalStorage('eduportal:session', { isAuthenticated: false });
 
   const saveProfile = (nextProfile) => {
     setProfile(nextProfile);
     setSession({ isAuthenticated: true });
+  };
+
+  const clearProfile = () => {
+    setProfile(null);
+    setSession({ isAuthenticated: false });
   };
 
   const logout = () => {
@@ -41,6 +46,7 @@ export function AppProvider({ children }) {
     () => ({
       profile,
       saveProfile,
+      clearProfile,
       session,
       logout,
       favorites,

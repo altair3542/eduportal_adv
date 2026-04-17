@@ -1,106 +1,149 @@
-# EduPortal Frontend
+# EduPortal Advanced
 
-Proyecto base con React + Vite para práctica de formularios, validación y diseño UI.
+SPA académica construida con React, React Router y Tailwind CSS. Permite explorar universidades, crear un perfil institucional con validación semántica y guardar favoritos con acceso protegido.
+
+El proyecto se construye en sesiones acumulativas: cada una añade una capa de complejidad sobre la anterior, reflejando cómo crece una aplicación real.
+
+## Sesiones del proyecto
+
+| Sesión | Tema | Conceptos |
+|--------|------|-----------|
+| 1 | Componentes y formularios | Estado local, formularios controlados, validación por campo |
+| 2 | Capa de datos | Servicios asíncronos, normalización, hooks personalizados, estados de carga |
+| 3 | Arquitectura SPA | React Router, layout persistente, contexto global, rutas protegidas |
+| 4 | Formularios avanzados | Validación semántica, campos con dependencias, persistencia en localStorage |
 
 ## Inicio rápido
 
-1. Instala Node.js LTS (recomendado 20.x).
-2. Verifica versión:
+Requisito: Node.js LTS (recomendado 20.x o superior).
 
 ```bash
-node -v
-npm -v
-```
-
-3. Instala dependencias:
-
-```bash
+# 1. Instalar dependencias
 npm install
-```
 
-4. Inicia el servidor de desarrollo:
-
-```bash
+# 2. Iniciar el servidor de desarrollo
 npm run dev
 ```
 
-5. Abre la URL que aparece en consola (normalmente http://localhost:5173).
+Abre la URL que aparece en consola (normalmente `http://localhost:5173`).
 
 ## Scripts disponibles
 
 ```bash
-npm run dev      # desarrollo
-npm run build    # build de producción
-npm run preview  # vista previa del build
+npm run dev      # servidor de desarrollo con hot reload
+npm run build    # build de producción en /dist
+npm run preview  # vista previa del build de producción
 ```
 
 ## Estructura del proyecto
 
-```text
-eduportal_adv/
-├─ docs/
-│  ├─ design-identity.md
-│  └─ tailwind-translation-guide.md
-├─ src/
-│  ├─ components/
-│  ├─ App.jsx
-│  ├─ index.css
-│  └─ main.jsx
-├─ index.html
-├─ package.json
-├─ vite.config.js
-└─ README.md
 ```
+src/
+├── app/                    → infraestructura de la SPA
+│   ├── AppRoutes.jsx       → mapa de rutas
+│   ├── AppShell.jsx        → layout persistente (header + nav)
+│   └── ProtectedRoute.jsx  → guarda de acceso autenticado
+│
+├── components/             → componentes reutilizables sin lógica de negocio
+│   ├── ButtonPrimary.jsx
+│   ├── FormField.jsx
+│   ├── NavItem.jsx
+│   ├── SectionHeading.jsx
+│   └── SurfaceCard.jsx
+│
+├── context/
+│   └── AppContext.jsx      → estado global: perfil, sesión, favoritos
+│
+├── data/
+│   └── universities.seed.json
+│
+├── features/               → módulos de negocio
+│   ├── favorites/          → página de favoritos (ruta protegida)
+│   ├── onboarding/         → perfil institucional y validación semántica
+│   └── universities/       → explorador con búsqueda y filtrado
+│
+├── hooks/
+│   └── UseLocalStorage.js  → sincronización reactiva con localStorage
+│
+├── lib/
+│   └── cn.js               → utilidad para combinar clases CSS
+│
+├── pages/
+│   ├── DashboardPage.jsx
+│   └── NotFoundPage.jsx
+│
+└── services/
+    └── universties.service.js  → acceso a datos y normalización
+```
+
+## Rutas de la aplicación
+
+| Ruta | Componente | Acceso |
+|------|-----------|--------|
+| `/` | `DashboardPage` | Libre |
+| `/perfil` | `OnboardingPage` | Libre |
+| `/universidades` | `UniversityExplorerPage` | Libre |
+| `/favoritos` | `FavoritesPage` | Requiere sesión activa |
+
+Si se intenta acceder a `/favoritos` sin sesión, la app redirige automáticamente a `/perfil`.
+
+## Estado global
+
+El contexto expone los siguientes valores y funciones:
+
+```js
+// Estado
+profile        // perfil del usuario o null
+session        // { isAuthenticated: boolean }
+favorites      // array de universidades guardadas
+
+// Funciones
+saveProfile(data)          // guarda el perfil y activa la sesión
+clearProfile()             // borra el perfil y cierra la sesión
+logout()                   // cierra la sesión sin borrar el perfil
+toggleFavorite(university) // agrega o quita de favoritos
+isFavorite(universityId)   // devuelve true/false
+```
+
+El estado persiste en `localStorage` con las claves `eduportal:profile`, `eduportal:session` y `eduportal:favorites`. Al recargar la página, el estado se restaura automáticamente.
+
+## Documentación técnica
+
+La carpeta `docs/` contiene documentación adicional:
+
+| Archivo | Contenido |
+|---------|-----------|
+| `docs/architecture.md` | Documentación pedagógica completa: cómo funciona cada pieza, por qué existe y cómo se conecta con las demás |
+| `docs/design-identity.md` | Decisiones de identidad visual del proyecto |
+| `docs/tailwind-translation-guide.md` | Guía conceptual de la migración de CSS a Tailwind |
 
 ## Solución de problemas
 
-### 1) Error por política de scripts (Windows PowerShell)
+### Error de política de scripts (Windows PowerShell)
 
-Si ves un error parecido a:
+Si ves `running scripts is disabled on this system`:
 
-- running scripts is disabled on this system
-- cannot be loaded because running scripts is disabled
-
-Prueba, en este orden:
-
-Opción A (temporal, solo para la terminal actual):
-
+**Opción A** — solo para la terminal actual:
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 npm run dev
 ```
 
-Opción B (sin cambiar políticas, usando CMD):
-
+**Opción B** — usando CMD en lugar de PowerShell:
 ```cmd
 npm.cmd run dev
 ```
 
-Opción C (abrir proyecto en Command Prompt o Git Bash):
-
-- Ejecuta los mismos comandos de npm desde CMD o Git Bash.
-
-Opción D (global, PowerShell como Administrador):
-
+**Opción C** — configuración global (requiere PowerShell como Administrador):
 ```powershell
 Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy RemoteSigned
 ```
 
-Verificación recomendada:
+### Puerto ocupado
 
-```powershell
-Get-ExecutionPolicy -List
-```
+Vite sugerirá automáticamente un puerto alternativo. Acéptalo o cierra el proceso que ocupa el puerto original.
 
-Nota: esta opción aplica a todo el equipo. En máquinas institucionales, úsala solo si está permitida por la política de TI.
-
-### 2) Puerto ocupado
-
-Si Vite indica que el puerto está en uso, acepta el puerto alternativo sugerido por consola o cierra el proceso que lo ocupa.
-
-### 3) Dependencias corruptas
-
-Si hay errores extraños al iniciar:
+### Dependencias corruptas
 
 ```bash
 rm -rf node_modules package-lock.json
@@ -109,20 +152,9 @@ npm run dev
 ```
 
 En Windows PowerShell:
-
 ```powershell
 Remove-Item -Recurse -Force node_modules
 Remove-Item -Force package-lock.json
 npm install
 npm run dev
 ```
-
-## Contexto académico
-
-Este proyecto sirve como base de frontend para practicar:
-
-- componentes React
-- formularios controlados
-- validaciones por campo
-- estado de éxito y flujo de registro
-- preparación de diseño para una migración futura a Tailwind
