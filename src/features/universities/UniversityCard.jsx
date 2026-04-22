@@ -1,15 +1,23 @@
-import { useAppContext } from '../../context/AppContext';
+import { Link } from 'react-router';
 import SurfaceCard from '../../components/SurfaceCard';
+import { useAppContext } from '../../context/AppContext';
 
 function UniversityCard({ university }) {
-  const { toggleFavorite, isFavorite } = useAppContext();
+  const { toggleFavorite, isFavorite, getFavoriteById } = useAppContext();
   const selected = isFavorite(university.id);
+  const favorite = getFavoriteById(university.id);
 
   return (
-    <SurfaceCard className="flex h-full flex-col justify-between space-y-4">
+    <SurfaceCard className="flex h-full flex-col justify-between space-y-5">
       <div className="space-y-3">
-        <div className="inline-flex rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">
-          {university.country}
+        <div className="flex flex-wrap gap-2">
+          <span className="inline-flex rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">
+            {university.country}
+          </span>
+
+          <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-700">
+            {university.domainZone}
+          </span>
         </div>
 
         <div className="space-y-2">
@@ -21,20 +29,22 @@ function UniversityCard({ university }) {
             Dominio institucional:{' '}
             <span className="font-medium">{university.domain}</span>
           </p>
+
+          {favorite?.note ? (
+            <p className="text-sm text-slate-500">
+              Nota rápida: {favorite.note}
+            </p>
+          ) : null}
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-3 pt-2">
-        {university.website ? (
-          <a
-            href={university.website}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex rounded-2xl bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-800"
-          >
-            Visitar sitio
-          </a>
-        ) : null}
+      <div className="flex flex-wrap gap-3">
+        <Link
+          to={`/universidades/${university.id}`}
+          className="inline-flex rounded-2xl bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-800"
+        >
+          Ver detalle
+        </Link>
 
         <button
           onClick={() => toggleFavorite(university)}
@@ -44,7 +54,7 @@ function UniversityCard({ university }) {
               : 'rounded-2xl bg-white/80 px-4 py-2 text-sm font-semibold text-slate-700'
           }
         >
-          {selected ? 'Quitar favorito' : 'Guardar favorito'}
+          {selected ? 'Quitar de shortlist' : 'Guardar en shortlist'}
         </button>
       </div>
     </SurfaceCard>

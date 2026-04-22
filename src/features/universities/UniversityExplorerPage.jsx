@@ -1,35 +1,53 @@
 import SectionHeading from '../../components/SectionHeading';
-import UniversityCard from './UniversityCard';
-import UniversityFilters from './UniversityFilters';
 import { EmptyState, ErrorState, LoadingState } from './UniversityStates';
-import { useUniversities } from './useUniversities';
+import UniversityCard from './UniversityCard';
+import UniversityExplorerToolbar from './UniversityExplorerToolbar';
+import { useUniversityExplorer } from './useUniversityExplorer';
 
 function UniversityExplorerPage() {
   const {
-    filteredUniversities,
-    query,
-    setQuery,
-    country,
-    setCountry,
-    countries,
     loading,
     error,
-  } = useUniversities();
+    query,
+    country,
+    domainZone,
+    sort,
+    saved,
+    countries,
+    domainZones,
+    filteredUniversities,
+    activeFiltersCount,
+    setQuery,
+    setCountry,
+    setDomainZone,
+    setSort,
+    setSaved,
+    clearFilters,
+  } = useUniversityExplorer();
 
   return (
     <div className="space-y-8">
       <SectionHeading
-        eyebrow="Sesión 2 · Capa de datos"
-        title="Exploración académica"
-        description="Integramos una fuente de instituciones, normalizamos la estructura y construimos una experiencia de búsqueda y filtrado preparada para crecer."
+        eyebrow="Sesión 5 · Exploración madura"
+        title="Exploración institucional avanzada"
+        description="La búsqueda, los filtros y el ordenamiento ahora viven en la URL, lo que hace la experiencia más compartible, persistente y coherente con una SPA de producto."
       />
 
-      <UniversityFilters
+      <UniversityExplorerToolbar
         query={query}
         setQuery={setQuery}
         country={country}
         setCountry={setCountry}
+        domainZone={domainZone}
+        setDomainZone={setDomainZone}
+        sort={sort}
+        setSort={setSort}
+        saved={saved}
+        setSaved={setSaved}
         countries={countries}
+        domainZones={domainZones}
+        activeFiltersCount={activeFiltersCount}
+        clearFilters={clearFilters}
       />
 
       {loading ? <LoadingState /> : null}
@@ -39,11 +57,17 @@ function UniversityExplorerPage() {
       ) : null}
 
       {!loading && !error && filteredUniversities.length > 0 ? (
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {filteredUniversities.map((university) => (
-            <UniversityCard key={university.id} university={university} />
-          ))}
-        </div>
+        <>
+          <p className="text-sm text-slate-600">
+            Resultados encontrados: {filteredUniversities.length}
+          </p>
+
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {filteredUniversities.map((university) => (
+              <UniversityCard key={university.id} university={university} />
+            ))}
+          </div>
+        </>
       ) : null}
     </div>
   );

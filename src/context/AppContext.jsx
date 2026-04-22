@@ -9,8 +9,8 @@ const INITIAL_SESSION = { isAuthenticated: false };
 
 export function AppProvider({ children }) {
   const [profile, setProfile] = useLocalStorage('eduportal:profile', INITIAL_PROFILE);
-  const [favorites, setFavorites] = useLocalStorage('eduportal:favorites', []);
-  const [session, setSession] = useLocalStorage('eduportal:session', { isAuthenticated: false });
+  const [favorites, setFavorites] = useLocalStorage('eduportal:favorites', INITIAL_FAVORITES);
+  const [session, setSession] = useLocalStorage('eduportal:session', INITIAL_SESSION);
 
   const saveProfile = (nextProfile) => {
     setProfile(nextProfile);
@@ -34,12 +34,34 @@ export function AppProvider({ children }) {
         return current.filter((item) => item.id !== university.id);
       }
 
-      return [...current, university];
+      return [
+        ...current,
+        {
+          id: university.id,
+          university,
+          note: '',
+          priority: 'medium',
+        },
+      ];
     });
+  };
+
+  const updateFavoriteMeta = (universityId, patch) => {
+    setFavorites((current) =>
+      current.map((item) =>
+        item.id === universityId
+          ? { ...item, ...patch }
+          : item
+      )
+    );
   };
 
   const isFavorite = (universityId) => {
     return favorites.some((item) => item.id === universityId);
+  };
+
+  const getFavoriteById = (universityId) => {
+    return favorites.find((item) => item.id === universityId) ?? null;
   };
 
   const value = useMemo(
@@ -51,7 +73,9 @@ export function AppProvider({ children }) {
       logout,
       favorites,
       toggleFavorite,
+      updateFavoriteMeta,
       isFavorite,
+      getFavoriteById,
     }),
     [profile, session, favorites]
   );

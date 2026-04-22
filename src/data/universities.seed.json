@@ -1,38 +1,1194 @@
 [
   {
+    "id": "colombia-universidad-de-antioquia",
     "name": "Universidad de Antioquia",
     "country": "Colombia",
-    "domains": ["udea.edu.co"],
-    "web_pages": ["https://www.udea.edu.co"]
+    "domain": "udea.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.udea.edu.co"
   },
   {
+    "id": "colombia-universidad-nacional-de-colombia",
     "name": "Universidad Nacional de Colombia",
     "country": "Colombia",
-    "domains": ["unal.edu.co"],
-    "web_pages": ["https://unal.edu.co"]
+    "domain": "unal.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://unal.edu.co"
   },
   {
+    "id": "colombia-pontificia-universidad-javeriana",
     "name": "Pontificia Universidad Javeriana",
     "country": "Colombia",
-    "domains": ["javeriana.edu.co"],
-    "web_pages": ["https://www.javeriana.edu.co"]
+    "domain": "javeriana.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.javeriana.edu.co"
   },
   {
+    "id": "argentina-universidad-de-buenos-aires",
     "name": "Universidad de Buenos Aires",
     "country": "Argentina",
-    "domains": ["uba.ar"],
-    "web_pages": ["https://www.uba.ar"]
+    "domain": "uba.ar",
+    "domainZone": ".ar",
+    "website": "https://www.uba.ar"
   },
   {
+    "id": "chile-universidad-de-chile",
     "name": "Universidad de Chile",
     "country": "Chile",
-    "domains": ["uchile.cl"],
-    "web_pages": ["https://www.uchile.cl"]
+    "domain": "uchile.cl",
+    "domainZone": ".cl",
+    "website": "https://www.uchile.cl"
   },
   {
+    "id": "mexico-universidad-nacional-autonoma-de-mexico",
     "name": "Universidad Nacional Autónoma de México",
     "country": "México",
-    "domains": ["unam.mx"],
-    "web_pages": ["https://www.unam.mx"]
+    "domain": "unam.mx",
+    "domainZone": ".mx",
+    "website": "https://www.unam.mx"
+  },
+  {
+    "id": "chile-pontificia-universidad-catolica-de-chile",
+    "name": "Pontificia Universidad Católica de Chile",
+    "country": "Chile",
+    "domain": "puc.cl",
+    "domainZone": ".cl",
+    "website": "https://www.puc.cl"
+  },
+  {
+    "id": "colombia-universidad-de-los-andes",
+    "name": "Universidad de Los Andes",
+    "country": "Colombia",
+    "domain": "uniandes.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.uniandes.edu.co"
+  },
+  {
+    "id": "colombia-universidad-del-valle",
+    "name": "Universidad del Valle",
+    "country": "Colombia",
+    "domain": "univalle.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.univalle.edu.co"
+  },
+  {
+    "id": "argentina-pontificia-universidad-catolica-de-argentina",
+    "name": "Pontificia Universidad Católica de Argentina",
+    "country": "Argentina",
+    "domain": "uca.edu.ar",
+    "domainZone": ".edu.ar",
+    "website": "https://www.uca.edu.ar"
+  },
+  {
+    "id": "argentina-universidad-nacional-de-la-plata",
+    "name": "Universidad Nacional de La Plata",
+    "country": "Argentina",
+    "domain": "unlp.edu.ar",
+    "domainZone": ".edu.ar",
+    "website": "https://www.unlp.edu.ar"
+  },
+  {
+    "id": "brasil-universidad-de-sao-paulo",
+    "name": "Universidad de São Paulo",
+    "country": "Brasil",
+    "domain": "usp.br",
+    "domainZone": ".br",
+    "website": "https://www.usp.br"
+  },
+  {
+    "id": "brasil-pontificia-universidade-catolica-do-rio-de-janeiro",
+    "name": "Pontifícia Universidade Católica do Rio de Janeiro",
+    "country": "Brasil",
+    "domain": "puc-rio.br",
+    "domainZone": ".br",
+    "website": "https://www.puc-rio.br"
+  },
+  {
+    "id": "brasil-universidade-federal-do-rio-de-janeiro",
+    "name": "Universidade Federal do Rio de Janeiro",
+    "country": "Brasil",
+    "domain": "ufrj.br",
+    "domainZone": ".br",
+    "website": "https://www.ufrj.br"
+  },
+  {
+    "id": "brasil-universidade-estadual-de-campinas",
+    "name": "Universidade Estadual de Campinas",
+    "country": "Brasil",
+    "domain": "unicamp.br",
+    "domainZone": ".br",
+    "website": "https://www.unicamp.br"
+  },
+  {
+    "id": "brasil-universidade-federal-de-minas-gerais",
+    "name": "Universidade Federal de Minas Gerais",
+    "country": "Brasil",
+    "domain": "ufmg.br",
+    "domainZone": ".br",
+    "website": "https://www.ufmg.br"
+  },
+  {
+    "id": "peru-universidad-nacional-mayor-de-san-marcos",
+    "name": "Universidad Nacional Mayor de San Marcos",
+    "country": "Perú",
+    "domain": "unmsm.edu.pe",
+    "domainZone": ".edu.pe",
+    "website": "https://www.unmsm.edu.pe"
+  },
+  {
+    "id": "peru-pontificia-universidad-catolica-del-peru",
+    "name": "Pontificia Universidad Católica del Perú",
+    "country": "Perú",
+    "domain": "pucp.edu.pe",
+    "domainZone": ".edu.pe",
+    "website": "https://www.pucp.edu.pe"
+  },
+  {
+    "id": "peru-universidad-de-lima",
+    "name": "Universidad de Lima",
+    "country": "Perú",
+    "domain": "ulima.edu.pe",
+    "domainZone": ".edu.pe",
+    "website": "https://www.ulima.edu.pe"
+  },
+  {
+    "id": "peru-universidad-nacional-de-ingenieria",
+    "name": "Universidad Nacional de Ingeniería",
+    "country": "Perú",
+    "domain": "uni.edu.pe",
+    "domainZone": ".edu.pe",
+    "website": "https://www.uni.edu.pe"
+  },
+  {
+    "id": "peru-universidad-san-ignacio-de-loyola",
+    "name": "Universidad San Ignacio de Loyola",
+    "country": "Perú",
+    "domain": "usil.edu.pe",
+    "domainZone": ".edu.pe",
+    "website": "https://www.usil.edu.pe"
+  },
+  {
+    "id": "colombia-universidad-tecnologica-de-bolivar",
+    "name": "Universidad Tecnológica de Bolívar",
+    "country": "Colombia",
+    "domain": "utb.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.utb.edu.co"
+  },
+  {
+    "id": "colombia-pontificia-universidad-javeriana-cali",
+    "name": "Pontificia Universidad Javeriana Cali",
+    "country": "Colombia",
+    "domain": "javerianacali.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.javerianacali.edu.co"
+  },
+  {
+    "id": "colombia-universidad-eafit",
+    "name": "Universidad Eafit",
+    "country": "Colombia",
+    "domain": "eafit.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.eafit.edu.co"
+  },
+  {
+    "id": "colombia-universidad-industrial-de-santander",
+    "name": "Universidad Industrial de Santander",
+    "country": "Colombia",
+    "domain": "uis.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.uis.edu.co"
+  },
+  {
+    "id": "colombia-universidad-del-rosario",
+    "name": "Universidad del Rosario",
+    "country": "Colombia",
+    "domain": "urosario.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.urosario.edu.co"
+  },
+  {
+    "id": "colombia-universidad-autonoma-de-occidente",
+    "name": "Universidad Autónoma de Occidente",
+    "country": "Colombia",
+    "domain": "uao.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.uao.edu.co"
+  },
+  {
+    "id": "colombia-universidad-sergio-arboleda",
+    "name": "Universidad Sergio Arboleda",
+    "country": "Colombia",
+    "domain": "usa.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.usa.edu.co"
+  },
+  {
+    "id": "colombia-universidad-de-cordoba",
+    "name": "Universidad de Córdoba",
+    "country": "Colombia",
+    "domain": "unicordoba.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.unicordoba.edu.co"
+  },
+  {
+    "id": "colombia-universidad-pedagogica-nacional",
+    "name": "Universidad Pedagógica Nacional",
+    "country": "Colombia",
+    "domain": "upn.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.upn.edu.co"
+  },
+  {
+    "id": "colombia-universidad-distrital-francisco-jose-de-caldas",
+    "name": "Universidad Distrital Francisco José de Caldas",
+    "country": "Colombia",
+    "domain": "udistrital.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.udistrital.edu.co"
+  },
+  {
+    "id": "colombia-universidad-pontificia-bolivariana",
+    "name": "Universidad Pontificia Bolivariana",
+    "country": "Colombia",
+    "domain": "upb.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.upb.edu.co"
+  },
+  {
+    "id": "colombia-universidad-de-narino",
+    "name": "Universidad de Nariño",
+    "country": "Colombia",
+    "domain": "udenar.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.udenar.edu.co"
+  },
+  {
+    "id": "colombia-universidad-del-cauca",
+    "name": "Universidad del Cauca",
+    "country": "Colombia",
+    "domain": "unicauca.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.unicauca.edu.co"
+  },
+  {
+    "id": "colombia-universidad-de-cartagena",
+    "name": "Universidad de Cartagena",
+    "country": "Colombia",
+    "domain": "unicartagena.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.unicartagena.edu.co"
+  },
+  {
+    "id": "colombia-universidad-de-sucre",
+    "name": "Universidad de Sucre",
+    "country": "Colombia",
+    "domain": "unisucre.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.unisucre.edu.co"
+  },
+  {
+    "id": "colombia-universidad-de-caldas",
+    "name": "Universidad de Caldas",
+    "country": "Colombia",
+    "domain": "ucaldas.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.ucaldas.edu.co"
+  },
+  {
+    "id": "colombia-universidad-nacional-de-colombia-sede-manizales",
+    "name": "Universidad Nacional de Colombia Sede Manizales",
+    "country": "Colombia",
+    "domain": "manizales.unal.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://manizales.unal.edu.co"
+  },
+  {
+    "id": "colombia-universidad-de-la-salle",
+    "name": "Universidad de La Salle",
+    "country": "Colombia",
+    "domain": "lasalle.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.lasalle.edu.co"
+  },
+  {
+    "id": "colombia-universidad-libre",
+    "name": "Universidad Libre",
+    "country": "Colombia",
+    "domain": "unilibre.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.unilibre.edu.co"
+  },
+  {
+    "id": "colombia-universidad-cooperativa-de-colombia",
+    "name": "Universidad Cooperativa de Colombia",
+    "country": "Colombia",
+    "domain": "ucc.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.ucc.edu.co"
+  },
+  {
+    "id": "colombia-fundacion-universidad-de-america",
+    "name": "Fundación Universidad de América",
+    "country": "Colombia",
+    "domain": "fuamer.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.fuamer.edu.co"
+  },
+  {
+    "id": "colombia-universidad-ean",
+    "name": "Universidad EAN",
+    "country": "Colombia",
+    "domain": "ean.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.ean.edu.co"
+  },
+  {
+    "id": "colombia-universidad-autonoma-latinoamericana",
+    "name": "Universidad Autónoma Latinoamericana",
+    "country": "Colombia",
+    "domain": "unaula.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.unaula.edu.co"
+  },
+  {
+    "id": "colombia-universidad-cecar",
+    "name": "Universidad CECAR",
+    "country": "Colombia",
+    "domain": "cecar.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.cecar.edu.co"
+  },
+  {
+    "id": "colombia-universidad-de-pamplona",
+    "name": "Universidad de Pamplona",
+    "country": "Colombia",
+    "domain": "unipamplona.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.unipamplona.edu.co"
+  },
+  {
+    "id": "colombia-universidad-de-quindio",
+    "name": "Universidad de Quindío",
+    "country": "Colombia",
+    "domain": "uniquindio.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.uniquindio.edu.co"
+  },
+  {
+    "id": "colombia-universidad-del-tolima",
+    "name": "Universidad del Tolima",
+    "country": "Colombia",
+    "domain": "ut.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.ut.edu.co"
+  },
+  {
+    "id": "colombia-universidad-francisco-de-paula-santander",
+    "name": "Universidad Francisco de Paula Santander",
+    "country": "Colombia",
+    "domain": "ufpso.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.ufpso.edu.co"
+  },
+  {
+    "id": "colombia-universidad-maria-cano",
+    "name": "Universidad María Cano",
+    "country": "Colombia",
+    "domain": "umariocano.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.umariocano.edu.co"
+  },
+  {
+    "id": "colombia-universidad-tecnologica-de-pereira",
+    "name": "Universidad Tecnológica de Pereira",
+    "country": "Colombia",
+    "domain": "utp.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.utp.edu.co"
+  },
+  {
+    "id": "colombia-universidad-icesi",
+    "name": "Universidad ICESI",
+    "country": "Colombia",
+    "domain": "icesi.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.icesi.edu.co"
+  },
+  {
+    "id": "colombia-universidad-ces",
+    "name": "Universidad CES",
+    "country": "Colombia",
+    "domain": "ces.edu.co",
+    "domainZone": ".edu.co",
+    "website": "https://www.ces.edu.co"
+  },
+  {
+    "id": "argentina-pontificia-universidad-catolica-de-argentina-san-miguel",
+    "name": "Pontificia Universidad Católica de Argentina San Miguel",
+    "country": "Argentina",
+    "domain": "uca.sanmiguel.edu.ar",
+    "domainZone": ".edu.ar",
+    "website": "https://www.uca.sanmiguel.edu.ar"
+  },
+  {
+    "id": "argentina-universidad-tecnologica-nacional",
+    "name": "Universidad Tecnológica Nacional",
+    "country": "Argentina",
+    "domain": "utn.edu.ar",
+    "domainZone": ".edu.ar",
+    "website": "https://www.utn.edu.ar"
+  },
+  {
+    "id": "argentina-universidad-nacional-de-cordoba",
+    "name": "Universidad Nacional de Córdoba",
+    "country": "Argentina",
+    "domain": "unc.edu.ar",
+    "domainZone": ".edu.ar",
+    "website": "https://www.unc.edu.ar"
+  },
+  {
+    "id": "argentina-universidad-nacional-del-nordeste",
+    "name": "Universidad Nacional del Nordeste",
+    "country": "Argentina",
+    "domain": "unne.edu.ar",
+    "domainZone": ".edu.ar",
+    "website": "https://www.unne.edu.ar"
+  },
+  {
+    "id": "argentina-universidad-nacional-de-rosario",
+    "name": "Universidad Nacional de Rosario",
+    "country": "Argentina",
+    "domain": "unr.edu.ar",
+    "domainZone": ".edu.ar",
+    "website": "https://www.unr.edu.ar"
+  },
+  {
+    "id": "argentina-universidad-torcuato-di-tella",
+    "name": "Universidad Torcuato Di Tella",
+    "country": "Argentina",
+    "domain": "utdt.edu.ar",
+    "domainZone": ".edu.ar",
+    "website": "https://www.utdt.edu.ar"
+  },
+  {
+    "id": "argentina-universidad-del-bosque",
+    "name": "Universidad del Bosque",
+    "country": "Argentina",
+    "domain": "udb.edu.ar",
+    "domainZone": ".edu.ar",
+    "website": "https://www.udb.edu.ar"
+  },
+  {
+    "id": "chile-pontificia-universidad-catolica-de-valparaiso",
+    "name": "Pontificia Universidad Católica de Valparaíso",
+    "country": "Chile",
+    "domain": "pucv.cl",
+    "domainZone": ".cl",
+    "website": "https://www.pucv.cl"
+  },
+  {
+    "id": "chile-universidad-tecnica-federico-santa-maria",
+    "name": "Universidad Técnica Federico Santa María",
+    "country": "Chile",
+    "domain": "usm.cl",
+    "domainZone": ".cl",
+    "website": "https://www.usm.cl"
+  },
+  {
+    "id": "chile-universidad-de-concepcion",
+    "name": "Universidad de Concepción",
+    "country": "Chile",
+    "domain": "udec.cl",
+    "domainZone": ".cl",
+    "website": "https://www.udec.cl"
+  },
+  {
+    "id": "chile-universidad-catolica-del-norte",
+    "name": "Universidad Católica del Norte",
+    "country": "Chile",
+    "domain": "ucn.cl",
+    "domainZone": ".cl",
+    "website": "https://www.ucn.cl"
+  },
+  {
+    "id": "chile-universidad-de-la-frontera",
+    "name": "Universidad de La Frontera",
+    "country": "Chile",
+    "domain": "ufro.cl",
+    "domainZone": ".cl",
+    "website": "https://www.ufro.cl"
+  },
+  {
+    "id": "chile-universidad-austral-de-chile",
+    "name": "Universidad Austral de Chile",
+    "country": "Chile",
+    "domain": "uach.cl",
+    "domainZone": ".cl",
+    "website": "https://www.uach.cl"
+  },
+  {
+    "id": "chile-universidad-de-magallanes",
+    "name": "Universidad de Magallanes",
+    "country": "Chile",
+    "domain": "umag.cl",
+    "domainZone": ".cl",
+    "website": "https://www.umag.cl"
+  },
+  {
+    "id": "brasil-universidade-estadual-paulista",
+    "name": "Universidade Estadual Paulista",
+    "country": "Brasil",
+    "domain": "unesp.br",
+    "domainZone": ".br",
+    "website": "https://www.unesp.br"
+  },
+  {
+    "id": "brasil-universidade-federal-de-brasilia",
+    "name": "Universidade Federal de Brasília",
+    "country": "Brasil",
+    "domain": "unb.br",
+    "domainZone": ".br",
+    "website": "https://www.unb.br"
+  },
+  {
+    "id": "estados-unidos-harvard-university",
+    "name": "Harvard University",
+    "country": "Estados Unidos",
+    "domain": "harvard.edu",
+    "domainZone": ".edu",
+    "website": "https://www.harvard.edu"
+  },
+  {
+    "id": "estados-unidos-stanford-university",
+    "name": "Stanford University",
+    "country": "Estados Unidos",
+    "domain": "stanford.edu",
+    "domainZone": ".edu",
+    "website": "https://www.stanford.edu"
+  },
+  {
+    "id": "estados-unidos-mit",
+    "name": "MIT",
+    "country": "Estados Unidos",
+    "domain": "mit.edu",
+    "domainZone": ".edu",
+    "website": "https://www.mit.edu"
+  },
+  {
+    "id": "estados-unidos-california-institute-of-technology",
+    "name": "California Institute of Technology",
+    "country": "Estados Unidos",
+    "domain": "caltech.edu",
+    "domainZone": ".edu",
+    "website": "https://www.caltech.edu"
+  },
+  {
+    "id": "estados-unidos-university-of-chicago",
+    "name": "University of Chicago",
+    "country": "Estados Unidos",
+    "domain": "uchicago.edu",
+    "domainZone": ".edu",
+    "website": "https://www.uchicago.edu"
+  },
+  {
+    "id": "estados-unidos-university-of-pennsylvania",
+    "name": "University of Pennsylvania",
+    "country": "Estados Unidos",
+    "domain": "upenn.edu",
+    "domainZone": ".edu",
+    "website": "https://www.upenn.edu"
+  },
+  {
+    "id": "estados-unidos-yale-university",
+    "name": "Yale University",
+    "country": "Estados Unidos",
+    "domain": "yale.edu",
+    "domainZone": ".edu",
+    "website": "https://www.yale.edu"
+  },
+  {
+    "id": "estados-unidos-columbia-university",
+    "name": "Columbia University",
+    "country": "Estados Unidos",
+    "domain": "columbia.edu",
+    "domainZone": ".edu",
+    "website": "https://www.columbia.edu"
+  },
+  {
+    "id": "estados-unidos-princeton-university",
+    "name": "Princeton University",
+    "country": "Estados Unidos",
+    "domain": "princeton.edu",
+    "domainZone": ".edu",
+    "website": "https://www.princeton.edu"
+  },
+  {
+    "id": "estados-unidos-university-of-california-berkeley",
+    "name": "University of California Berkeley",
+    "country": "Estados Unidos",
+    "domain": "berkeley.edu",
+    "domainZone": ".edu",
+    "website": "https://www.berkeley.edu"
+  },
+  {
+    "id": "estados-unidos-northwestern-university",
+    "name": "Northwestern University",
+    "country": "Estados Unidos",
+    "domain": "northwestern.edu",
+    "domainZone": ".edu",
+    "website": "https://www.northwestern.edu"
+  },
+  {
+    "id": "estados-unidos-university-of-michigan",
+    "name": "University of Michigan",
+    "country": "Estados Unidos",
+    "domain": "umich.edu",
+    "domainZone": ".edu",
+    "website": "https://www.umich.edu"
+  },
+  {
+    "id": "canada-university-of-toronto",
+    "name": "University of Toronto",
+    "country": "Canadá",
+    "domain": "utoronto.ca",
+    "domainZone": ".ca",
+    "website": "https://www.utoronto.ca"
+  },
+  {
+    "id": "canada-university-of-british-columbia",
+    "name": "University of British Columbia",
+    "country": "Canadá",
+    "domain": "ubc.ca",
+    "domainZone": ".ca",
+    "website": "https://www.ubc.ca"
+  },
+  {
+    "id": "canada-mcgill-university",
+    "name": "McGill University",
+    "country": "Canadá",
+    "domain": "mcgill.ca",
+    "domainZone": ".ca",
+    "website": "https://www.mcgill.ca"
+  },
+  {
+    "id": "reino-unido-university-of-cambridge",
+    "name": "University of Cambridge",
+    "country": "Reino Unido",
+    "domain": "cam.ac.uk",
+    "domainZone": ".ac.uk",
+    "website": "https://www.cam.ac.uk"
+  },
+  {
+    "id": "reino-unido-university-of-oxford",
+    "name": "University of Oxford",
+    "country": "Reino Unido",
+    "domain": "ox.ac.uk",
+    "domainZone": ".ac.uk",
+    "website": "https://www.ox.ac.uk"
+  },
+  {
+    "id": "reino-unido-imperial-college-london",
+    "name": "Imperial College London",
+    "country": "Reino Unido",
+    "domain": "ic.ac.uk",
+    "domainZone": ".ac.uk",
+    "website": "https://www.imperial.ac.uk"
+  },
+  {
+    "id": "reino-unido-university-college-london",
+    "name": "University College London",
+    "country": "Reino Unido",
+    "domain": "ucl.ac.uk",
+    "domainZone": ".ac.uk",
+    "website": "https://www.ucl.ac.uk"
+  },
+  {
+    "id": "reino-unido-london-school-of-economics",
+    "name": "London School of Economics",
+    "country": "Reino Unido",
+    "domain": "lse.ac.uk",
+    "domainZone": ".ac.uk",
+    "website": "https://www.lse.ac.uk"
+  },
+  {
+    "id": "reino-unido-university-of-edinburgh",
+    "name": "University of Edinburgh",
+    "country": "Reino Unido",
+    "domain": "ed.ac.uk",
+    "domainZone": ".ac.uk",
+    "website": "https://www.ed.ac.uk"
+  },
+  {
+    "id": "espana-universidad-autonoma-de-madrid",
+    "name": "Universidad Autónoma de Madrid",
+    "country": "España",
+    "domain": "uam.es",
+    "domainZone": ".es",
+    "website": "https://www.uam.es"
+  },
+  {
+    "id": "espana-universidad-complutense-de-madrid",
+    "name": "Universidad Complutense de Madrid",
+    "country": "España",
+    "domain": "ucm.es",
+    "domainZone": ".es",
+    "website": "https://www.ucm.es"
+  },
+  {
+    "id": "espana-universidad-de-barcelona",
+    "name": "Universidad de Barcelona",
+    "country": "España",
+    "domain": "ub.edu",
+    "domainZone": ".edu",
+    "website": "https://www.ub.edu"
+  },
+  {
+    "id": "espana-universitat-autonoma-de-barcelona",
+    "name": "Universitat Autònoma de Barcelona",
+    "country": "España",
+    "domain": "uab.es",
+    "domainZone": ".es",
+    "website": "https://www.uab.es"
+  },
+  {
+    "id": "espana-universidad-politecnica-de-madrid",
+    "name": "Universidad Politécnica de Madrid",
+    "country": "España",
+    "domain": "upm.es",
+    "domainZone": ".es",
+    "website": "https://www.upm.es"
+  },
+  {
+    "id": "espana-universidad-de-salamanca",
+    "name": "Universidad de Salamanca",
+    "country": "España",
+    "domain": "usal.es",
+    "domainZone": ".es",
+    "website": "https://www.usal.es"
+  },
+  {
+    "id": "francia-sorbonne-university",
+    "name": "Sorbonne University",
+    "country": "Francia",
+    "domain": "sorbonne-universite.fr",
+    "domainZone": ".fr",
+    "website": "https://www.sorbonne-universite.fr"
+  },
+  {
+    "id": "francia-universite-paris-saclay",
+    "name": "Université Paris-Saclay",
+    "country": "Francia",
+    "domain": "universite-paris-saclay.fr",
+    "domainZone": ".fr",
+    "website": "https://www.universite-paris-saclay.fr"
+  },
+  {
+    "id": "francia-psl-university",
+    "name": "PSL University",
+    "country": "Francia",
+    "domain": "psl.eu",
+    "domainZone": ".eu",
+    "website": "https://www.psl.eu"
+  },
+  {
+    "id": "francia-hec-paris",
+    "name": "HEC Paris",
+    "country": "Francia",
+    "domain": "hec.edu",
+    "domainZone": ".edu",
+    "website": "https://www.hec.edu"
+  },
+  {
+    "id": "alemania-heidelberg-university",
+    "name": "Heidelberg University",
+    "country": "Alemania",
+    "domain": "uni-heidelberg.de",
+    "domainZone": ".de",
+    "website": "https://www.uni-heidelberg.de"
+  },
+  {
+    "id": "alemania-ludwig-maximilians-university-munich",
+    "name": "Ludwig Maximilians University Munich",
+    "country": "Alemania",
+    "domain": "lmu.de",
+    "domainZone": ".de",
+    "website": "https://www.lmu.de"
+  },
+  {
+    "id": "alemania-technical-university-of-munich",
+    "name": "Technical University of Munich",
+    "country": "Alemania",
+    "domain": "tum.de",
+    "domainZone": ".de",
+    "website": "https://www.tum.de"
+  },
+  {
+    "id": "alemania-humboldt-university-of-berlin",
+    "name": "Humboldt University of Berlin",
+    "country": "Alemania",
+    "domain": "hu-berlin.de",
+    "domainZone": ".de",
+    "website": "https://www.hu-berlin.de"
+  },
+  {
+    "id": "italia-university-of-sapienza-rome",
+    "name": "University of Sapienza Rome",
+    "country": "Italia",
+    "domain": "uniroma1.it",
+    "domainZone": ".it",
+    "website": "https://www.uniroma1.it"
+  },
+  {
+    "id": "italia-university-of-milan",
+    "name": "University of Milan",
+    "country": "Italia",
+    "domain": "unimi.it",
+    "domainZone": ".it",
+    "website": "https://www.unimi.it"
+  },
+  {
+    "id": "italia-university-of-bologna",
+    "name": "University of Bologna",
+    "country": "Italia",
+    "domain": "unibo.it",
+    "domainZone": ".it",
+    "website": "https://www.unibo.it"
+  },
+  {
+    "id": "portugal-universidade-de-lisboa",
+    "name": "Universidade de Lisboa",
+    "country": "Portugal",
+    "domain": "ulisboa.pt",
+    "domainZone": ".pt",
+    "website": "https://www.ulisboa.pt"
+  },
+  {
+    "id": "portugal-universidade-do-porto",
+    "name": "Universidade do Porto",
+    "country": "Portugal",
+    "domain": "up.pt",
+    "domainZone": ".pt",
+    "website": "https://www.up.pt"
+  },
+  {
+    "id": "suecia-karolinska-institute",
+    "name": "Karolinska Institute",
+    "country": "Suecia",
+    "domain": "ki.se",
+    "domainZone": ".se",
+    "website": "https://www.ki.se"
+  },
+  {
+    "id": "suecia-uppsala-university",
+    "name": "Uppsala University",
+    "country": "Suecia",
+    "domain": "uu.se",
+    "domainZone": ".se",
+    "website": "https://www.uu.se"
+  },
+  {
+    "id": "holanda-university-of-amsterdam",
+    "name": "University of Amsterdam",
+    "country": "Holanda",
+    "domain": "uva.nl",
+    "domainZone": ".nl",
+    "website": "https://www.uva.nl"
+  },
+  {
+    "id": "holanda-university-of-groningen",
+    "name": "University of Groningen",
+    "country": "Holanda",
+    "domain": "rug.nl",
+    "domainZone": ".nl",
+    "website": "https://www.rug.nl"
+  },
+  {
+    "id": "belgica-ku-leuven",
+    "name": "KU Leuven",
+    "country": "Bélgica",
+    "domain": "kuleuven.be",
+    "domainZone": ".be",
+    "website": "https://www.kuleuven.be"
+  },
+  {
+    "id": "belgica-university-of-ghent",
+    "name": "University of Ghent",
+    "country": "Bélgica",
+    "domain": "ugent.be",
+    "domainZone": ".be",
+    "website": "https://www.ugent.be"
+  },
+  {
+    "id": "suiza-eth-zurich",
+    "name": "ETH Zurich",
+    "country": "Suiza",
+    "domain": "ethz.ch",
+    "domainZone": ".ch",
+    "website": "https://www.ethz.ch"
+  },
+  {
+    "id": "suiza-university-of-geneva",
+    "name": "University of Geneva",
+    "country": "Suiza",
+    "domain": "unige.ch",
+    "domainZone": ".ch",
+    "website": "https://www.unige.ch"
+  },
+  {
+    "id": "dinamarca-university-of-copenhagen",
+    "name": "University of Copenhagen",
+    "country": "Dinamarca",
+    "domain": "ku.dk",
+    "domainZone": ".dk",
+    "website": "https://www.ku.dk"
+  },
+  {
+    "id": "dinamarca-aarhus-university",
+    "name": "Aarhus University",
+    "country": "Dinamarca",
+    "domain": "au.dk",
+    "domainZone": ".dk",
+    "website": "https://www.au.dk"
+  },
+  {
+    "id": "noruega-university-of-oslo",
+    "name": "University of Oslo",
+    "country": "Noruega",
+    "domain": "uio.no",
+    "domainZone": ".no",
+    "website": "https://www.uio.no"
+  },
+  {
+    "id": "noruega-norwegian-university-of-science-and-technology",
+    "name": "Norwegian University of Science and Technology",
+    "country": "Noruega",
+    "domain": "ntnu.no",
+    "domainZone": ".no",
+    "website": "https://www.ntnu.no"
+  },
+  {
+    "id": "australia-university-of-melbourne",
+    "name": "University of Melbourne",
+    "country": "Australia",
+    "domain": "unimelb.edu.au",
+    "domainZone": ".edu.au",
+    "website": "https://www.unimelb.edu.au"
+  },
+  {
+    "id": "australia-university-of-sydney",
+    "name": "University of Sydney",
+    "country": "Australia",
+    "domain": "sydney.edu.au",
+    "domainZone": ".edu.au",
+    "website": "https://www.sydney.edu.au"
+  },
+  {
+    "id": "australia-australian-national-university",
+    "name": "Australian National University",
+    "country": "Australia",
+    "domain": "anu.edu.au",
+    "domainZone": ".edu.au",
+    "website": "https://www.anu.edu.au"
+  },
+  {
+    "id": "australia-university-of-new-south-wales",
+    "name": "University of New South Wales",
+    "country": "Australia",
+    "domain": "unsw.edu.au",
+    "domainZone": ".edu.au",
+    "website": "https://www.unsw.edu.au"
+  },
+  {
+    "id": "nueva-zelanda-university-of-auckland",
+    "name": "University of Auckland",
+    "country": "Nueva Zelanda",
+    "domain": "auckland.ac.nz",
+    "domainZone": ".ac.nz",
+    "website": "https://www.auckland.ac.nz"
+  },
+  {
+    "id": "nueva-zelanda-university-of-otago",
+    "name": "University of Otago",
+    "country": "Nueva Zelanda",
+    "domain": "otago.ac.nz",
+    "domainZone": ".ac.nz",
+    "website": "https://www.otago.ac.nz"
+  },
+  {
+    "id": "japon-university-of-tokyo",
+    "name": "University of Tokyo",
+    "country": "Japón",
+    "domain": "u-tokyo.ac.jp",
+    "domainZone": ".ac.jp",
+    "website": "https://www.u-tokyo.ac.jp"
+  },
+  {
+    "id": "japon-kyoto-university",
+    "name": "Kyoto University",
+    "country": "Japón",
+    "domain": "kyoto-u.ac.jp",
+    "domainZone": ".ac.jp",
+    "website": "https://www.kyoto-u.ac.jp"
+  },
+  {
+    "id": "japon-osaka-university",
+    "name": "Osaka University",
+    "country": "Japón",
+    "domain": "osaka-u.ac.jp",
+    "domainZone": ".ac.jp",
+    "website": "https://www.osaka-u.ac.jp"
+  },
+  {
+    "id": "japon-tokyo-institute-of-technology",
+    "name": "Tokyo Institute of Technology",
+    "country": "Japón",
+    "domain": "titech.ac.jp",
+    "domainZone": ".ac.jp",
+    "website": "https://www.titech.ac.jp"
+  },
+  {
+    "id": "corea-del-sur-seoul-national-university",
+    "name": "Seoul National University",
+    "country": "Corea del Sur",
+    "domain": "snu.ac.kr",
+    "domainZone": ".ac.kr",
+    "website": "https://www.snu.ac.kr"
+  },
+  {
+    "id": "corea-del-sur-kaist",
+    "name": "KAIST",
+    "country": "Corea del Sur",
+    "domain": "kaist.ac.kr",
+    "domainZone": ".ac.kr",
+    "website": "https://www.kaist.ac.kr"
+  },
+  {
+    "id": "corea-del-sur-yonsei-university",
+    "name": "Yonsei University",
+    "country": "Corea del Sur",
+    "domain": "yonsei.ac.kr",
+    "domainZone": ".ac.kr",
+    "website": "https://www.yonsei.ac.kr"
+  },
+  {
+    "id": "china-tsinghua-university",
+    "name": "Tsinghua University",
+    "country": "China",
+    "domain": "tsinghua.edu.cn",
+    "domainZone": ".edu.cn",
+    "website": "https://www.tsinghua.edu.cn"
+  },
+  {
+    "id": "china-peking-university",
+    "name": "Peking University",
+    "country": "China",
+    "domain": "pku.edu.cn",
+    "domainZone": ".edu.cn",
+    "website": "https://www.pku.edu.cn"
+  },
+  {
+    "id": "china-fudan-university",
+    "name": "Fudan University",
+    "country": "China",
+    "domain": "fudan.edu.cn",
+    "domainZone": ".edu.cn",
+    "website": "https://www.fudan.edu.cn"
+  },
+  {
+    "id": "china-shanghai-jiao-tong-university",
+    "name": "Shanghai Jiao Tong University",
+    "country": "China",
+    "domain": "sjtu.edu.cn",
+    "domainZone": ".edu.cn",
+    "website": "https://www.sjtu.edu.cn"
+  },
+  {
+    "id": "india-indian-institute-of-technology-bombay",
+    "name": "Indian Institute of Technology Bombay",
+    "country": "India",
+    "domain": "iitb.ac.in",
+    "domainZone": ".ac.in",
+    "website": "https://www.iitb.ac.in"
+  },
+  {
+    "id": "india-delhi-university",
+    "name": "Delhi University",
+    "country": "India",
+    "domain": "du.ac.in",
+    "domainZone": ".ac.in",
+    "website": "https://www.du.ac.in"
+  },
+  {
+    "id": "india-jawaharlal-nehru-university",
+    "name": "Jawaharlal Nehru University",
+    "country": "India",
+    "domain": "jnu.ac.in",
+    "domainZone": ".ac.in",
+    "website": "https://www.jnu.ac.in"
+  },
+  {
+    "id": "singapur-national-university-of-singapore",
+    "name": "National University of Singapore",
+    "country": "Singapur",
+    "domain": "nus.edu.sg",
+    "domainZone": ".edu.sg",
+    "website": "https://www.nus.edu.sg"
+  },
+  {
+    "id": "tailandia-chulalongkorn-university",
+    "name": "Chulalongkorn University",
+    "country": "Tailandia",
+    "domain": "chula.ac.th",
+    "domainZone": ".ac.th",
+    "website": "https://www.chula.ac.th"
+  },
+  {
+    "id": "malasia-university-of-malaya",
+    "name": "University of Malaya",
+    "country": "Malasia",
+    "domain": "um.edu.my",
+    "domainZone": ".edu.my",
+    "website": "https://www.um.edu.my"
+  },
+  {
+    "id": "sudafrica-university-of-cape-town",
+    "name": "University of Cape Town",
+    "country": "Sudáfrica",
+    "domain": "uct.ac.za",
+    "domainZone": ".ac.za",
+    "website": "https://www.uct.ac.za"
+  },
+  {
+    "id": "sudafrica-university-of-witwatersrand",
+    "name": "University of Witwatersrand",
+    "country": "Sudáfrica",
+    "domain": "wits.ac.za",
+    "domainZone": ".ac.za",
+    "website": "https://www.wits.ac.za"
+  },
+  {
+    "id": "israel-tel-aviv-university",
+    "name": "Tel Aviv University",
+    "country": "Israel",
+    "domain": "tau.ac.il",
+    "domainZone": ".ac.il",
+    "website": "https://www.tau.ac.il"
+  },
+  {
+    "id": "arabia-saudita-king-saud-university",
+    "name": "King Saud University",
+    "country": "Arabia Saudita",
+    "domain": "ksu.edu.sa",
+    "domainZone": ".edu.sa",
+    "website": "https://www.ksu.edu.sa"
+  },
+  {
+    "id": "rusia-moscow-state-university",
+    "name": "Moscow State University",
+    "country": "Rusia",
+    "domain": "msu.ru",
+    "domainZone": ".ru",
+    "website": "https://www.msu.ru"
   }
 ]
