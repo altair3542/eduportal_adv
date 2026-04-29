@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router';
 import ButtonPrimary from '../../components/ButtonPrimary';
 import SurfaceCard from '../../components/SurfaceCard';
 import { useAppContext } from '../../context/AppContext';
-import { getUniversityById } from '../../services/universties.service';
+import { getUniversityById } from '../../services/universities.service';
 
 function UniversityDetailPage() {
   const { universityId } = useParams();

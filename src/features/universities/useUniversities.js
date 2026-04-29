@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { getUniversities } from '../../services/universties.service'
+import { getUniversities } from '../../services/universities.service'
 
 export function useUniversities() {
   const [universities, setUniversities] = useState([]);

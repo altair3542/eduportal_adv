@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import { link } from 'react-router'
+import { Link } from 'react-router'
 import SurfaceCard from '../../components/SurfaceCard'
 
 function UniversityCardView({
@@ -37,15 +37,15 @@ function UniversityCardView({
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap items-center gap-3">
         <Link
           to={`/universidades/${university.id}`}
-          className="inline-flex rounded-2xl bg-slate-900 px-4 text-sm font-medium text-white transition hover:bg-slate-800"
+          className="inline-flex rounded-2xl bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-800"
         >
           Ver detalle
         </Link>
 
-        <Button
+        <button
           onClick={onToggleFavorite}
           className={
             selected
@@ -54,7 +54,7 @@ function UniversityCardView({
           }
         >
           {selected ? 'Quitar de shortlist' : 'Guardar en shortlist'}
-        </Button>
+        </button>
       </div>
     </SurfaceCard>
   )

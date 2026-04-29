@@ -1,64 +1,24 @@
-import { Link } from 'react-router';
-import SurfaceCard from '../../components/SurfaceCard';
-import { useAppContext } from '../../context/AppContext';
+import { useCallback } from 'react'
+import { useAppContext } from '../../context/AppContext'
+import UniversityCardView from './UniversityCardView'
 
 function UniversityCard({ university }) {
-  const { toggleFavorite, isFavorite, getFavoriteById } = useAppContext();
-  const selected = isFavorite(university.id);
-  const favorite = getFavoriteById(university.id);
+  const { toggleFavorite, isFavorite, getFavoriteById  } = useAppContext()
+  const selected = isFavorite(university.id)
+  const favorite = getFavoriteById(university.id)
+
+  const handleToggleFavorite = useCallback(() => {
+    toggleFavorite(university)
+  }, [toggleFavorite, university])
 
   return (
-    <SurfaceCard className="flex h-full flex-col justify-between space-y-5">
-      <div className="space-y-3">
-        <div className="flex flex-wrap gap-2">
-          <span className="inline-flex rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">
-            {university.country}
-          </span>
-
-          <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-700">
-            {university.domainZone}
-          </span>
-        </div>
-
-        <div className="space-y-2">
-          <h3 className="text-xl font-semibold leading-snug text-slate-900">
-            {university.name}
-          </h3>
-
-          <p className="text-sm text-slate-600">
-            Dominio institucional:{' '}
-            <span className="font-medium">{university.domain}</span>
-          </p>
-
-          {favorite?.note ? (
-            <p className="text-sm text-slate-500">
-              Nota rápida: {favorite.note}
-            </p>
-          ) : null}
-        </div>
-      </div>
-
-      <div className="flex flex-wrap gap-3">
-        <Link
-          to={`/universidades/${university.id}`}
-          className="inline-flex rounded-2xl bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-800"
-        >
-          Ver detalle
-        </Link>
-
-        <button
-          onClick={() => toggleFavorite(university)}
-          className={
-            selected
-              ? 'rounded-2xl bg-amber-400 px-4 py-2 text-sm font-semibold text-slate-900'
-              : 'rounded-2xl bg-white/80 px-4 py-2 text-sm font-semibold text-slate-700'
-          }
-        >
-          {selected ? 'Quitar de shortlist' : 'Guardar en shortlist'}
-        </button>
-      </div>
-    </SurfaceCard>
-  );
+    <UniversityCardView
+      university={university}
+      selected={selected}
+      note={favorite?.note ?? ''}
+      onToggleFavorite={handleToggleFavorite}
+    />
+  )
 }
 
-export default UniversityCard;
+export default UniversityCard

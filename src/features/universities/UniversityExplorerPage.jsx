@@ -1,7 +1,8 @@
 import SectionHeading from '../../components/SectionHeading';
-import { EmptyState, ErrorState, LoadingState } from './UniversityStates';
 import UniversityCard from './UniversityCard';
 import UniversityExplorerToolbar from './UniversityExplorerToolbar';
+import UniversitySkeletonGrid from './UniversitySkeletonGrid';
+import { EmptyState, ErrorState } from './UniversityStates';
 import { useUniversityExplorer } from './useUniversityExplorer';
 
 function UniversityExplorerPage() {
@@ -16,7 +17,6 @@ function UniversityExplorerPage() {
     countries,
     domainZones,
     filteredUniversities,
-    activeFiltersCount,
     setQuery,
     setCountry,
     setDomainZone,
@@ -28,9 +28,9 @@ function UniversityExplorerPage() {
   return (
     <div className="space-y-8">
       <SectionHeading
-        eyebrow="Sesión 5 · Exploración madura"
-        title="Exploración institucional avanzada"
-        description="La búsqueda, los filtros y el ordenamiento ahora viven en la URL, lo que hace la experiencia más compartible, persistente y coherente con una SPA de producto."
+        eyebrow="Sesión 6 · Calidad y rendimiento"
+        title="Exploración institucional optimizada"
+        description="Reducimos fricción, extraemos responsabilidades y mejoramos la experiencia percibida sin cambiar el objetivo funcional del módulo."
       />
 
       <UniversityExplorerToolbar
@@ -46,28 +46,21 @@ function UniversityExplorerPage() {
         setSaved={setSaved}
         countries={countries}
         domainZones={domainZones}
-        activeFiltersCount={activeFiltersCount}
         clearFilters={clearFilters}
       />
 
-      {loading ? <LoadingState /> : null}
+      {loading ? <UniversitySkeletonGrid /> : null}
       {!loading && error ? <ErrorState message={error} /> : null}
       {!loading && !error && filteredUniversities.length === 0 ? (
         <EmptyState />
       ) : null}
 
       {!loading && !error && filteredUniversities.length > 0 ? (
-        <>
-          <p className="text-sm text-slate-600">
-            Resultados encontrados: {filteredUniversities.length}
-          </p>
-
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {filteredUniversities.map((university) => (
-              <UniversityCard key={university.id} university={university} />
-            ))}
-          </div>
-        </>
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {filteredUniversities.map((university) => (
+            <UniversityCard key={university.id} university={university} />
+          ))}
+        </div>
       ) : null}
     </div>
   );
