@@ -1,30 +1,38 @@
-import { useEffect, useMemo, useState } from 'react'
-import { useSearchParams } from 'react-router'
-import { getUniversities } from '../../services/universties.service'
-import { useAppContext } from '../../context/AppContext'
+import { useEffect, useMemo, useState, useCallback } from 'react';
+import { useSearchParams } from 'react-router';
+import { getUniversities } from '../../services/universities.service';
+import { useAppContext } from '../../context/AppContext';
+import { useDebouncedValue } from '../../hooks/useDebouncedValue';
 
 export function useUniversityExplorer() {
-  const [universities, setUniversities] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
-  const [searchParams, setSearchParams] = useSearchParams()
-  const { favorites } = useAppContext()
+  const [universities, setUniversities] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const { favorites } = useAppContext();
+
+  const query = searchParams.get('q') ?? '';
+  const debouncedQuery = useDebouncedValue(query, 250);
+  const country = searchParams.get('country') ?? 'all';
+  const domainZone = searchParams.get('domain') ?? 'all';
+  const sort = searchParams.get('sort') ?? 'name-asc';
+  const saved = searchParams.get('saved') ?? '0';
 
   useEffect(() => {
-    let ignore = false
+    let ignore = false;
 
     async function load() {
       try {
-        setLoading(true)
-        setError('')
-        const data = await getUniversities()
+        setLoading(true);
+        setError('');
+        const data = await getUniversities();
 
         if (!ignore) {
-          setUniversities(Array.isArray(data) ? data : [])
+          setUniversities(data);
         }
       } catch {
         if (!ignore) {
-          setError('No fue posible cargar la exploracion insititucional')
+          setError('No fue posible cargar la exploración institucional.');
         }
       } finally {
         if (!ignore) {
@@ -33,31 +41,27 @@ export function useUniversityExplorer() {
       }
     }
 
-    load()
+    load();
 
     return () => {
-      ignore = true
-    }
-  }, [])
+      ignore = true;
+    };
+  }, []);
 
+  const setParam = useCallback(
+    (key, value) => {
+      const next = new URLSearchParams(searchParams);
 
-  const query = searchParams.get('q') ?? ''
-  const country = searchParams.get('country') ?? 'all'
-  const domainZone = searchParams.get('domainZone') ?? 'all'
-  const sort = searchParams.get('sort') ?? 'name-asc'
-  const saved = searchParams.get('saved') ?? '0'
+      if (!value || value === 'all' || value === '0') {
+        next.delete(key);
+      } else {
+        next.set(key, value);
+      }
 
-  const setParam = (key, value) => {
-    const next = new URLSearchParams(searchParams)
-
-    if (!value || value === 'all' || value === 0) {
-      next.delete(key)
-    } else {
-      next.set(key, value)
-    }
-
-    setSearchParams(next)
-  }
+      setSearchParams(next);
+    },
+    [searchParams, setSearchParams]
+  );
 
   const countries = useMemo(() => {
     return [...new Set(universities.map((item) => item.country))].sort((a, b) =>
@@ -75,8 +79,9 @@ export function useUniversityExplorer() {
 
   const filteredUniversities = useMemo(() => {
     let result = [...universities];
-    if (query.trim()) {
-      const normalized = query.trim().toLowerCase();
+
+    if (debouncedQuery.trim()) {
+      const normalized = debouncedQuery.trim().toLowerCase();
       result = result.filter((item) =>
         item.name.toLowerCase().includes(normalized)
       );
@@ -106,15 +111,9 @@ export function useUniversityExplorer() {
           return a.name.localeCompare(b.name);
       }
     });
-    return result;
-  }, [universities, query, country, domainZone, sort, saved, favoriteIds]);
 
-  const activeFiltersCount = [
-    query.trim() ? 1 : 0,
-    country !== 'all' ? 1 : 0,
-    domainZone !== 'all' ? 1 : 0,
-    saved === '1' ? 1 : 0,
-  ].reduce((acc, value) => acc + value, 0);
+    return result;
+  }, [universities, debouncedQuery, country, domainZone, sort, saved, favoriteIds]);
 
   return {
     loading,
@@ -127,10 +126,9 @@ export function useUniversityExplorer() {
     countries,
     domainZones,
     filteredUniversities,
-    activeFiltersCount,
     setQuery: (value) => setParam('q', value),
     setCountry: (value) => setParam('country', value),
-    setDomainZone: (value) => setParam('domainZone', value),
+    setDomainZone: (value) => setParam('domain', value),
     setSort: (value) => setParam('sort', value),
     setSaved: (value) => setParam('saved', value),
     clearFilters: () => setSearchParams(new URLSearchParams()),
